@@ -1,0 +1,84 @@
+[33mcommit 2b191733c5f493e3a131711f514ed5aa12417083[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: rupp <rupp150406>
+Date:   Wed Nov 19 23:54:11 2025 +0700
+
+    awal video empat
+
+ .gitignore                                         |    5 [32m+[m
+ git-filter-repo-2.47.0.tar.xz                      |  Bin [31m0[m -> [32m186836[m bytes
+ git-filter-repo-2.47.0/.gitattributes              |    5 [32m+[m
+ git-filter-repo-2.47.0/.github/dependabot.yml      |    7 [32m+[m
+ git-filter-repo-2.47.0/.github/workflows/test.yml  |   39 [32m+[m
+ git-filter-repo-2.47.0/.gitignore                  |    5 [32m+[m
+ git-filter-repo-2.47.0/COPYING                     |   23 [32m+[m
+ git-filter-repo-2.47.0/COPYING.gpl                 |  339 [32m++[m
+ git-filter-repo-2.47.0/COPYING.mit                 |   19 [32m+[m
+ .../Documentation/Contributing.md                  |   76 [32m+[m
+ git-filter-repo-2.47.0/Documentation/FAQ.md        |  311 [32m++[m
+ .../converting-from-bfg-repo-cleaner.md            |  157 [32m+[m
+ .../Documentation/converting-from-filter-branch.md |  365 [32m++[m
+ .../examples-from-user-filed-issues.md             |  464 [32m++[m
+ .../Documentation/git-filter-repo.txt              | 1923 [32m++++++++[m
+ git-filter-repo-2.47.0/INSTALL.md                  |  214 [32m+[m
+ git-filter-repo-2.47.0/Makefile                    |  153 [32m+[m
+ git-filter-repo-2.47.0/README.md                   |  578 [32m+++[m
+ .../contrib/filter-repo-demos/README.md            |   38 [32m+[m
+ .../contrib/filter-repo-demos/barebones-example    |   28 [32m+[m
+ .../contrib/filter-repo-demos/bfg-ish              |  470 [32m++[m
+ .../contrib/filter-repo-demos/clean-ignore         |   82 [32m+[m
+ .../contrib/filter-repo-demos/convert-svnexternals |  602 [32m+++[m
+ .../contrib/filter-repo-demos/filter-branch-ish    |  615 [32m+++[m
+ .../contrib/filter-repo-demos/filter-lamely        |  615 [32m+++[m
+ .../contrib/filter-repo-demos/insert-beginning     |   62 [32m+[m
+ .../contrib/filter-repo-demos/lint-history         |  183 [32m+[m
+ .../contrib/filter-repo-demos/signed-off-by        |   65 [32m+[m
+ git-filter-repo-2.47.0/git-filter-repo             | 4976 [32m++++++++++++++++++++[m
+ git-filter-repo-2.47.0/git_filter_repo.py          | 4976 [32m++++++++++++++++++++[m
+ git-filter-repo-2.47.0/pyproject.toml              |   44 [32m+[m
+ git-filter-repo-2.47.0/t/run_coverage              |   35 [32m+[m
+ git-filter-repo-2.47.0/t/run_tests                 |   27 [32m+[m
+ .../t/t9390-filter-repo-basics.sh                  |  898 [32m++++[m
+ git-filter-repo-2.47.0/t/t9390/basic               |   95 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-filename      |   39 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-mailmap       |   78 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-message       |   78 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-numbers       |   76 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-replace       |   78 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-ten           |   50 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/basic-twenty        |   50 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/degenerate          |  402 [32m++[m
+ .../t/t9390/degenerate-evil-merge                  |   81 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/degenerate-globme   |  267 [32m++[m
+ git-filter-repo-2.47.0/t/t9390/degenerate-keepme   |  104 [32m+[m
+ .../t/t9390/degenerate-keepme-noff                 |  113 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/degenerate-moduleA  |  194 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/empty               |  128 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/empty-keepme        |   55 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/less-empty-keepme   |   97 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/more-empty-keepme   |   39 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/sample-mailmap      |    7 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/sample-message      |    4 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/sample-replace      |    1 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/unusual             |   35 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/unusual-filtered    |   23 [32m+[m
+ git-filter-repo-2.47.0/t/t9390/unusual-mailmap     |   23 [32m+[m
+ .../t/t9391-filter-repo-lib-usage.sh               |  259 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/commit_info.py      |   34 [32m+[m
+ .../t/t9391/create_fast_export_output.py           |  122 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/emoji-repo          |   29 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/erroneous.py        |   16 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/file_filter.py      |   30 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/print_progress.py   |   41 [32m+[m
+ .../t/t9391/rename-master-to-develop.py            |   18 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/splice_repos.py     |   87 [32m+[m
+ .../t/t9391/strip-cvs-keywords.py                  |   22 [32m+[m
+ git-filter-repo-2.47.0/t/t9391/unusual.py          |  131 [32m+[m
+ .../t/t9392-filter-repo-python-callback.sh         |  374 [32m++[m
+ .../t/t9393-filter-repo-rerun.sh                   |  830 [32m++++[m
+ git-filter-repo-2.47.0/t/t9393/lfs                 |  145 [32m+[m
+ git-filter-repo-2.47.0/t/t9393/simple              |   96 [32m+[m
+ ...ter-repo-sanity-checks-and-bigger-repo-setup.sh | 1187 [32m+++++[m
+ git-filter-repo-2.47.0/t/t9394/date-order          |   57 [32m+[m
+ git-filter-repo-2.47.0/t/test-lib-functions.sh     | 1311 [32m++++++[m
+ git-filter-repo-2.47.0/t/test-lib.sh               | 1428 [32m++++++[m
+ 77 files changed, 26733 insertions(+)
