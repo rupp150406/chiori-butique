@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Image\Laravel\Facades\Image;
+use Intervention\Image\Laravel\Facades\Image;
+
 
 class AdminController extends Controller
 {
@@ -23,7 +24,7 @@ class AdminController extends Controller
         return view('admin.brands', compact('brands'));
     }
 
-    public function brand_add()
+    public function add_brand()
     {
         return view('admin.brand-add');
     }

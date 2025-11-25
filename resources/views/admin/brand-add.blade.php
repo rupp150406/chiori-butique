@@ -29,8 +29,8 @@
                                 <!-- new-category -->
                                 <div class="wg-box">
                                     <form class="form-new-product form-style-1" action="{{ route('admin.brand.store') }}" method="POST"
+                                    enctype="multipart/form-data">
                                     @csrf
-                                        enctype="multipart/form-data">
                                         <fieldset class="name">
                                             <div class="body-title">Brand Name <span class="tf-color-1">*</span></div>
                                             <input class="flex-grow" type="text" placeholder="Brand name" name="name"
@@ -70,6 +70,11 @@
                                                 </div>
                                             </div>
                                         </fieldset>
+                                        @error('image')
+                                        <span class="alert alert-danger text-center">
+                                            {{ $message }}
+                                        </span>
+                                        @enderror
 
                                         <div class="bot">
                                             <div></div>
@@ -84,8 +89,8 @@
 @push('scripts')
         <script>
             $(function(){
-                $("#myfile").on("change", function(e){
-                    const photoInp = $("#myfile");
+                $("#myFile").on("change", function(e){
+                    const photoInp = $("#myFile");
                     const [file] = this.files;
                     if(file){
                         $("#imgpreview img").attr('src', URL.createObjectURL(file));
@@ -100,7 +105,7 @@
 
             function StringToSlug(Text)
             {
-                return Text.ToLowerCase()
+                return Text.toLowerCase()
                 .replace(/[^\w ]+/g, "")
                 .replace(/ +/g, "-");
             }
